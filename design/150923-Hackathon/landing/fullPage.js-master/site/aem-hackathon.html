@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AEM Hackathon - San Francisco / Conexio Group</title>
+    <meta name="author" content="Conexio Group" />
+    <meta name="description" content="AEM Hackathon - San Francisco" />
+    <meta name="keywords" content="AEM, Hackathon, San Francisco, Conexio, Adobe" />
+    <meta name="Resource-type" content="Document" />
+	 <link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+    <!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="../jquery.fullPage.js"></script>
+    <script type="text/javascript" src="examples.js"></script>
+	 <script type="text/javascript">// <![CDATA[
+        function preloader(){
+            $("#loading").fadeOut(1000);
+        }//preloader
+        window.onload = preloader;
+// ]]></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                verticalCentered: false,
+                navigation: true,
+                navigationPosition: 'right',
+                continuousVertical: true
+
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+	<div id="loading"></div>
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <img src="images/aem-hackathon-logo.png" alt="AEM Hackathon - San Francisco" />
+        </div>
+        <div class="section" id="section1">
+            <h1>Are you passionate about AEM?<br />
+			 Do you enjoy pushing its limits?<br />
+			 <p>Join the first AEM add-on hackathon!</p></h1>
+        </div>
+        <div class="section" id="section2">
+            <h2>We are inviting AEM developers with all levels of experience to participate.<br />
+			A daylong event with keynote presentations on the latest innovations of AEM,<br />
+		   lots of socializing, experience sharing and learning from other developers.</h2>
+            <div class="bottom">
+                <p>
+                    Show the world what you've got!
+                    <br /> The winning team will get an <span>Apple Watch</span>,
+                    <br />and will have its add-on published to the
+							<br /><span>AEM Outfitters marketplace</span>.
+                </p>
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+            <div style="overflow:hidden;height:100%;width:100%;">
+                <div id="gmap_canvas" style="height:100%;width:100%;"></div>
+                <style>
+                    #gmap_canvas img {
+                        max-width: none!important;
+                        background: none!important
+                    }
+                </style><a class="google-map-code" href="http://www.themecircle.net" id="get-map-data">themecircle.net</a></div>
+            <script type="text/javascript">
+                function init_map() {
+                    var myOptions = {
+                        zoom: 14,
+                        center: new google.maps.LatLng(37.7712057, -122.40166240000002),
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+                    map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+                    marker = new google.maps.Marker({
+                        map: map,
+                        position: new google.maps.LatLng(37.7712057, -122.40166240000002)
+                    });
+                    infowindow = new google.maps.InfoWindow({
+                        content: "<b>Adobe Systems SF</b><br/>601 Townsend St<br/>CA 94103 San Francisco"
+                    });
+                    google.maps.event.addListener(marker, "click", function() {
+                        infowindow.open(map, marker);
+                    });
+                    infowindow.open(map, marker);
+                }
+                google.maps.event.addDomListener(window, 'load', init_map);
+            </script>
+            <div id="info">
+                <div><img src="images/info-1.png" />
+                    <p>Friday, November 6</p>
+                </div>
+                <div><img src="images/info-2.png" />
+                    <p>9 AM - 9 PM</p>
+                </div>
+                <div><img src="images/info-3.png" />
+                    <p>Adobe Systems SF</p>
+                </div>
+                <div><img src="images/info-4.png" />
+                    <p>601 Townsend St, <span>San Francisco, CA 94103</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section4">
+            <h3><img src="images/sign-up.png" /> Sign up here: Eventbrite </h3>
+            <div style="width:80%; margin:auto; ">
+                <iframe src="http://www.eventbrite.com/tickets-external?eid=18781354537&ref=etckt" frameborder="0"  width="80%" height="300px" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="no" allowtransparency="true"></iframe>
+                <div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"></div>
+            </div>
+
+            <div class="sponsors">
+                <h4>Sponsor by:</h4>
+                <div class="col">-</div>
+                <div class="col">
+                    <a href="http://conexiogroup.com/" target="_blank"> <img src="images/bottom-conexio-adobe-solution-partner.png" /></a>
+                </div>
+                <div class="col">-</div>
+                <div class="col">
+                    <a href="http://aemoutfitters.com/" target="_blank"> <img src="images/bottom-aem-marketplace.png" width="150" style="margin-top:15px;" /></a>
+                </div>
+                <div class="col">-</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,797 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #59a4bb;
+    color:#FFF;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+textarea, input { outline: none; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    color:#999;
+    font-size:12px;
+}
+a {text-decoration: none;}
+.l {float:left;}
+.r {float:right;}
+.clear{clear:both;}
+.filterWrap {
+    background: #f5f5f5;
+    border-bottom: solid 2px #d3d3d3;
+}
+.centering {
+    width: 1100px;
+    margin:auto;
+}
+#filter .l {
+    width:932px;
+    display: inline-block;
+    padding: 15px 0 10px;
+    border-right: solid 1px #d3d3d3;
+    margin-bottom: -5px;
+}
+#filter .l * {
+    float:left;
+    display: inline-block;
+}
+#filter .l span {
+    color:#666;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 20px;
+    position: relative;
+}
+
+#filter .l span#tags {
+	cursor: pointer;
+}
+
+#filter .l span#tags img {
+    float: right;
+    width: 12px;
+    margin: 2px 0 2px 5px;
+	transform: rotate(180deg);
+	transition: ease 0.3s;
+	position: relative;
+}
+
+img.reverse {
+	transform: rotate(0deg) !important;
+}
+
+#filter div#mobFilter {
+    width: 850px;
+}
+#filter .l .addTag {
+    color:#59A4BB;
+    border:solid 1px #59A4BB;
+    padding: 5px 10px;
+    margin: -5px 15px 0 0;
+    cursor:pointer;
+    border-radius: 20px;
+    transition:ease 0.3s;
+    /*browser Optimized*/
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-transition:ease 0.3s;
+    -o-transition:ease 0.3s;
+    -webkit-transition:ease 0.3s;
+}
+#filter input[type="text"] {
+    border: none;
+    background: transparent;
+    margin-top: -5px;
+    padding: 5px 10px;
+    color: #454545;
+    border-bottom: solid 1px #dfdfdf;
+    font-size: 12px;
+    font-weight: 600;
+    display: none;
+}
+#filter .l .addTag:hover {
+    background: #59A4BB;
+    color:#FFF;
+}
+#filter .l .clearTags {
+    color: #59a4bb;
+    float: right;
+    margin-right: 20px;
+    cursor:pointer;
+}
+#filter .tagList {
+    margin: -7px 0 0 0px;
+}
+#filter .l .tagList span {
+    font-size: 10px;
+    color: #454545;
+    border: solid 1px #454545;
+    padding: 5px 18px 6px 5px;
+    margin: 2px 10px 6px 0;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: ease 0.3s;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    -webkit-transition: ease 0.3s;
+}
+#filter .l .tagList span a {
+    color: #59A4BB;
+    position: absolute;
+    top: 28%;
+    right: 6px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+#filter .l .tagList span a img {
+	margin:1px 0 0 0;
+}
+
+#filter .r {
+    width:167px;
+}
+
+#filter .r .orderBy {
+    text-align: center;
+    padding: 15px 0px;
+    font-weight: 600;
+    color:#666;
+	position:relative;
+	cursor: pointer;
+}
+
+#filter .r .orderBy img {
+    width: 12px;
+    transform: rotate(180deg);
+    transition: ease 0.3s;
+    position: absolute;
+    right: 40px;
+    top: 17px;
+}
+
+#articleTagFilter {
+    background: #dddddd;
+    padding: 10px 0;
+    margin-top: 0px;
+    box-shadow: 0PX 10000PX 0px 10000px rgba(0, 0, 0, 0.4);
+    z-index: 99999999;
+    position: absolute;
+    width: 100%;
+	display: none;
+}
+#articleTagFilter .subjectFilters h1 {display: none;}
+#articleTagFilter .subjectFilters h2 {
+    color:#999;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+#articleTagFilter .subjectFilters h2 input {
+    background:transparent;
+    border:none;
+    padding: 5px;
+    width:200px;
+    color:#454545;
+    border-bottom: solid 1px #c0c0c0;
+	font-weight: 600;
+}
+#articleTagFilter .subjectFilters ul {
+    width:750px;
+	padding: 0;
+}
+
+#articleTagFilter .subjectFilters ul li {
+    font-size:12px;
+    border:solid 1px #454545;
+    padding: 8px 15px 8px;
+    margin: 0 10px 10px 0;
+    display: inline-block;
+    cursor:pointer;
+    border-radius: 20px;
+    transition:ease 0.5s;
+    /*browser Optimized*/
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-transition:ease 0.5s;
+    -o-transition:ease 0.5s;
+    -webkit-transition:ease 0.5s;
+}
+
+#users ul.list li span.name {
+	color:#454545 !important;
+}
+
+#users ul.list li:hover {
+    background: #454545;
+    border-solid:1px solid #666;
+}
+
+#users ul.list li:hover span.name {
+	color:#FFF !important;
+}
+
+p.update {
+    text-align:center;
+    color:#666;
+    font-size: 13px;
+    font-weight: 300;
+    margin: 30px 0;
+}
+
+section.grid {display: table;}
+section.grid div {
+    text-align: center;
+    float:left;
+    display: inline-block;
+    position: relative;
+}
+
+section.grid div div.imgInfo {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 10;
+    background: rgba(34, 34, 34, 0.5);
+}
+
+section.grid div div.imgInfo:hover {
+    background: rgba(34,34,34,0.75);
+    transition:ease 0.5s;
+    -moz-transition:ease 0.5s;
+    -o-transition:ease 0.5s;
+    -webkit-transition:ease 0.5s;
+}
+
+section.grid div:nth-child(5n+1) {
+    margin: 0 5px 5px 0;
+}
+section.grid div:nth-child(5n+2) {
+    margin: 0 0 0 0;
+}
+section.grid div:nth-child(5n+3) {
+    margin: 2px 0 0 0;
+}
+section.grid div:nth-child(5n+4) {
+    margin: 0 5px 5px 0;
+}
+section.grid div:nth-child(5n+5) {
+    margin: 0 0 5px 0;
+}
+
+section.grid div:nth-child(5n+1) div.imgInfo{
+    width: 640px;
+    height: 350px;
+    padding-top: 150px;
+}
+
+section.grid div:nth-child(5n+2) div.imgInfo{
+    width: 455px;
+    height: 217px;
+    padding-top: 30px;
+}
+
+section.grid div:nth-child(5n+3) div.imgInfo{
+    width: 455px;
+    height: 218px;
+    padding-top: 30px;
+}
+
+section.grid div:nth-child(5n+4) div.imgInfo{
+    width: 455px;
+    height: 305px;
+    padding-top: 150px;
+}
+
+section.grid div:nth-child(5n+5) div.imgInfo{
+    width: 640px;
+    height: 305px;
+    padding-top: 150px;
+}
+
+section.grid div h1 , section.grid div h3 {
+    color:#FFF;
+} 
+section.grid div h1 {
+    font-weight: 700;
+    font-size: 28px;
+    margin:30px auto 25px;
+    width: 80%;
+    text-align: center;
+    line-height: 32px;
+}
+section.grid div h3 {
+    font-weight: 400;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+section.grid div a {
+    color:#59a4bb;
+    font-size: 14px;
+    font-weight: 600;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition:ease 0.5s;
+    /*browser Optimized*/
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-transition:ease 0.5s;
+    -o-transition:ease 0.5s;
+    -webkit-transition:ease 0.5s;
+}
+section.grid div a:hover {
+    color:#82c7dd;
+    background: rgba(0,0,0,0.75);
+}
+div.loading {
+    padding: 30px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    color:#7f7f7f;
+}
+div.loading span {
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media (min-width:320px) and (max-width:600px){
+
+    .centering {
+        width:100%;
+    }
+
+    #filter .l {width: 49%; padding: 0;}
+    #filter .r {width:50%;}
+    #filter div#mobFilter {
+        width: 184%;
+        display: none;
+    }
+    #filter .l .tagList , #filter .l .clearTags,
+    #filter .l input , #filter .l .addTag {display:none;} 
+    #filter .l span {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        padding:20px 0;
+        cursor: pointer;
+    }
+    .addTag {
+        display: block !important;
+    }
+
+    .clearTags {
+        display: block !important;
+    }
+	
+	.tagList {
+        display: table !important;
+		margin-bottom: 50px;
+		width:100%;
+		border-bottom:solid 10px transparent;
+    }
+
+    #filter .l .tagList span {
+        min-width:25%;
+        max-width:25%;
+        text-align:left;
+        text-indent:10px;
+    }
+    #filter .l .tagList span a {
+        right:12px;
+    }
+	
+    input[type="text"] {
+        display: block !important;
+    }
+    #filter .r .orderBy {padding: 20px 0;}
+    #articleTagFilter {
+        display: none;
+		height: 100%;
+		margin-top:-60px;
+    }
+    div#mobFilter {
+    width: 184%;
+    background-color: #E4E4E4;
+    position: relative;
+    padding: 10%;
+    height: 100%;
+    z-index: 999;
+    border-top: solid 1px #D8D8D8;
+    border-bottom: solid 2px #D8D8D8;
+}
+	
+	#filter .l span#tags img {
+		position:absolute;
+		top: 20px;
+    	right: 60px;
+	}
+	
+	#filter .r .orderBy img {
+		right: 55px;
+    	top: 22px;
+	}
+	
+    p.update {
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+        font-weight: 300;
+        margin: 15px 0;
+    }
+    section.grid div {
+        width: 90%;
+        float: none;
+        margin: 0 auto 5px !important;
+        display: block;
+    }
+    section.grid div div.imgInfo:hover {
+        background: #dddddd;
+    }
+    #news div div.imgInfo h3 {
+        margin-top: 15px;
+        color: #888;
+    }
+    #news div div.imgInfo h3::after {
+        content: " ";
+        width: 50%;
+        height: 1px;
+        background: rgba(80, 80, 80, 0.16);
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 25%;
+    }
+    #news div div.imgInfo h1 {
+        margin: 35px auto 10px;
+        color: #454545;
+        font-size: 16px;
+        line-height: 17px;
+        width: 65%;
+    }
+    section.grid div a , section.grid div a:hover {
+        background:none;
+        font-size: 12px;
+        color:#59A4BB;
+    }
+	
+	#articleTagFilter {
+		display: block;
+		box-shadow: none;
+		transition: ease 0.3s;
+	}
+	.moveToLeft {
+		transform: translateX(-100%);
+	}
+	.moveToRight {
+		transform: translateX(0%);
+	}
+	
+	#articleTagFilter .subjectFilters h1 {
+		display: block;
+		font-weight: 600;
+		font-size: 21px;
+		color:#666;
+		position: relative;
+	}
+	
+	#articleTagFilter .subjectFilters h1 img {
+		display: block;
+		position: absolute;
+		top:0px;
+		right: 0px;
+		cursor: pointer;
+	}
+    #articleTagFilter .subjectFilters h2 , 
+    #articleTagFilter .subjectFilters ul ,
+	#articleTagFilter .subjectFilters h1 {
+        width: 90%;
+        margin: 20px auto;
+    }
+	#articleTagFilter .subjectFilters h2 input {
+		width:100%;
+	}
+    
+}
+
+@media (min-width:400px) and (max-width:600px){
+    section.grid div img {
+        width: 30%;
+        height: 150px;
+        float: left;
+    }
+    section.grid div div.imgInfo {
+        width: 70% !important;
+        float:right;
+        position: relative;
+        padding-top: 0 !important;
+        height:150px !important;
+        background: #dddddd;
+    }
+}
+
+@media (min-width:300px) and (max-width:400px){
+    section.grid div img {
+        width: 40%;
+        height: 150px;
+        float: left;
+    }
+    section.grid div div.imgInfo {
+        width: 60% !important;
+        float:right;
+        position: relative;
+        padding-top: 0 !important;
+        height:150px !important;
+        background: #dddddd;
+    }
+    #news div div.imgInfo h1 {
+        margin:20px auto 10px;
+    }
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

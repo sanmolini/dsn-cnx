@@ -1,0 +1,231 @@
+
+        /* Style for our header texts
+	* --------------------------------------- */
+
+        h1 {
+            font-size: 5em;
+            font-family: arial, helvetica;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        /* Centered texts in each section
+	* --------------------------------------- */
+
+        .section {
+            text-align: center;
+        }
+        /* Backgrounds will cover all the section
+	* --------------------------------------- */
+
+        .section {
+            background-size: cover;
+        }
+
+        .slide {
+            background-size: cover;
+        }
+        /* Defining each section background and styles
+	* --------------------------------------- */
+
+        #section0 {
+            background-image: url(images/bg-1.jpg);
+            padding: 20% 0 0 0;
+        }
+
+        #section1 {
+            background-image: url(images/bg-2.jpg);
+            padding: 25% 0 0 0;
+        }
+
+        #section2 {
+            background-image: url(images/bg-3.jpg);
+            padding: 2% 0 0 0;
+        }
+
+        #section1 h1 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 300;
+            color: #FFF;
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+
+		 #section1 h1 p {
+			 animation: bounce 1.5s 5;
+			 -webkit-animation: bounce 1.5s 5;
+			 -moz-animation:bounce 1.5s 5;
+			 -o-animation: bounce 1.5s 5;
+    		font-weight: 400;
+			 font-size: 1em;
+		 }
+
+
+		 @-webkit-keyframes bounce {
+			 0% {font-size: .95em;opacity:0.7;}
+			 30% {font-size: 1.02em; opacity: 1;text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);}
+			 80% {font-size: 1.02em;opacity: 1;text-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.3);}
+			 100% {font-size: .95em;opacity:0.7;}
+		 }
+		@-moz-keyframes bounce {
+			  0% {font-size: .95em;opacity:0.7;}
+			 330% {font-size: 1.02em; opacity: 1;text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);}
+			 80% {font-size: 1.02em;opacity: 1;text-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.3);}
+			 100% {font-size: .95em;opacity:0.7;}
+		 }
+		@-o-keyframes bounce {
+			  0% {font-size: .95em;opacity:0.7;}
+			 30% {font-size: 1.02em; opacity: 1;text-shadow: 0px 0px 10px  rgba(255, 255, 255, 0.5);}
+			 80% {font-size: 1.02em;opacity: 1;text-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.3);}
+			 100% {font-size: .95em;opacity:0.7;}
+		 }
+		@keyframes bounce {
+			  0% {font-size: .95em;opacity:0.7;}
+			 30% {font-size: 1.02em; opacity: 1;text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);}
+			 80% {font-size: 1.02em;opacity: 1;text-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.3);}
+			 100% {font-size: .95em;opacity:0.7;}
+		 }
+
+        #section2 h2 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 400;
+            color: #2C3E50;
+            font-size: 1.6em;
+        }
+
+        .bottom p {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 300;
+            color: #2C3E50;
+            font-size: 2em;
+            margin-top: 5%;
+        }
+
+        .bottom p span {
+            color: #EF2E45;
+        }
+
+        #section3 {
+            position: relative;
+        }
+
+		 div#section3:after {
+			 width:93%;
+			 height:93%;
+			 background:rgba(255,255,255,0);
+			 position:absolute;
+			 bottom:0;
+			 left:0;
+			 z-index:999999;
+			 display:block;
+			 content:"";
+		}
+
+
+
+        #section3 h1 {
+            color: #000;
+        }
+
+        #info {
+            background: rgba(44, 62, 80, 0.85);
+            position: absolute;
+            bottom: 40px;
+            left: 10px;
+            padding: 10px;
+            width: 25%;
+            box-shadow: 0px 0px 10px 10px rgba(44, 62, 80, 0.25);
+        }
+
+        div#info div {
+            display: inline-block;
+            width: 100%;
+            padding: 5px;
+        }
+
+        div#info div img {
+            float: left;
+            margin-top: 6px;
+        }
+
+        div#info div p {
+            color: #FFF;
+            text-align: left;
+            float: left;
+            margin-left: 10px;
+            font-size: 18px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 300;
+            text-shadow: 1px 1px #000;
+        }
+
+        div#info div p span {
+            font-size: 15px;
+        }
+
+        #section4 {
+            background-image: url(images/bg-4.jpg);
+            padding: 2% 0 0 0;
+        }
+
+        #section4 h3 {
+            color: #FFF;
+            text-align: center;
+            font-size: 18px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 400;
+            padding: 35px 0 20px;
+        }
+
+        .sponsors h4 {
+            font-size: 21px;
+            color: #FFF;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 300;
+            margin: 30px auto 20px;
+        }
+
+        .sponsors .col {
+            width: 20%;
+            float: left;
+            display: inline-block;
+            color:rgba(0,0,0,0);
+        }
+
+        .sponsors .col:nth-child(even) {
+          width: 27%;
+        }
+
+        .sponsors .col:nth-child(4) {
+          width:5%;
+        }
+
+        .col a img {
+            transition: ease 0.3s;
+        }
+
+        .col a img:hover {
+            opacity: 0.5;
+        }
+        /*Adding background for the slides
+	* --------------------------------------- */
+        /* Bottom menu
+	* --------------------------------------- */
+
+        #infoMenu li a {
+            color: #fff;
+        }
+
+
+
+div#loading {
+    top: 0px;
+	left:0px;
+    margin: auto;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: url(images/loader.gif) 50% 50% no-repeat rgba(239,46,49,0.9);
+    }

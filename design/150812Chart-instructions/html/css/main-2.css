@@ -1,0 +1,163 @@
+section#chartIntructionsContainer {
+	font-family: 'Tahoma', 'Arial', sans-serif;
+	font-size: 11px;
+	color: #2D2B2B;
+	width: 478px;
+	margin: auto;
+	border-bottom: solid 1px #D2D2D2;
+	height: 203;
+}
+section#chartIntructionsContainer .tabs input[type=radio] {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+section#chartIntructionsContainer .tabs {
+	float: none;
+	list-style: none;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+section#chartIntructionsContainer .tabs li {
+	float: left;
+}
+
+section#chartIntructionsContainer .tabs label {
+	display: block;
+	padding: 12px;
+	width: 95px !important;
+	color: #7F8C8D;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-right: solid 1px #BDC3C7;
+	border-bottom: solid 1px #BDC3C7;
+	background: rgba(236, 240, 241, 1);
+	cursor: pointer;
+	position: relative;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+section#chartIntructionsContainer ul.tabs li:nth-child(5) label {
+    border-right:none;
+    width:98px !important;
+}
+section#chartIntructionsContainer .tabs label:hover {
+	background: #BDC3C7;
+	color: #7F8C8D;
+}
+section#chartIntructionsContainer [id^=tab]:checked + label {
+	background: #D8132B;
+	color: #ECF0F1;
+	border-right: solid 1px #EF2E45;
+	border-bottom: solid 1px #EF2E45;
+}
+section#chartIntructionsContainer [id^=tab]:checked ~ [id^=tab-content] {
+	display: block;
+}
+section#chartIntructionsContainer .tab-content {
+	z-index: 2;
+	display: none;
+	text-align: left;
+	width: 478px;
+	height: 165px;
+	line-height: 140%;
+	padding-top: 10px;
+	background: #FFF;
+	padding: 10px 15px 5px;
+	color: #2d2b2b;
+	position: absolute;
+	left: 0px;
+	top: 38px;
+	box-sizing: border-box;
+	-webkit-animation-duration: 0.5s;
+	-o-animation-duration: 0.5s;
+	-moz-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
+.tab-content * {
+	margin: 0;
+}
+.tab-content h1 {
+	margin: 0px;
+	font-size: 12px;
+}
+.tab-content p {
+	padding: 5px 0;
+}
+.tab-content p img,
+.tab-content img {
+	margin-right: 10px;
+	margin-top: 5px;
+}
+.tab-content p img {
+	padding: 5px 15px;
+	border: solid 1px #BDC3C7;
+}
+.tab-content table#steps {
+	width: 450px;
+	text-align: center;
+}
+.tab-content table#steps tr {
+	border: solid 1px #BDC3C7;
+	margin: 0;
+	padding: 0;
+}
+.tab-content table#steps tr td {
+	padding: 5px;
+	width: 30%;
+	border: solid 1px #BDC3C7;
+	margin: -1px -1px -2px 0px;
+	display: inline-block;
+	height: 16px;
+}
+span.soft,
+p.last {
+	color: #95A5A6;
+	font-size: 10px;
+}
+p.last {
+	margin-left: 10px;
+}
+span.warning {
+	color: #DD2319;
+}
+@-webkit-keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(50%, 0, 0);
+		transform: translate3d(50%, 0, 0)
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none
+	}
+}
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(50%, 0, 0);
+		transform: translate3d(50%, 0, 0)
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none
+	}
+}
+
+/*
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+	animation-duration: 1s;
+}*/
+
+.clear {
+	clear: both;
+}
+
